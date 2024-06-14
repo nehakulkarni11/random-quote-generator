@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
-    box-sizing:border-box;
-    background-image: linear-gradient(to bottom right, black, rgb(42, 0, 81)); 
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom right, black, rgb(42, 0, 81));
     font-family: "Playfair Display", serif;
 }
-.socials, .footer, .quote-container, .header, .fa, h2, blockquote, span, div, button {
+
+.socials,
+.footer,
+.quote-container,
+.header,
+.fa,
+h2,
+blockquote,
+span,
+div,
+button {
     background-image: none;
 }
-.header{
+
+.header {
     text-align: center;
     background-color: rgb(70, 5, 131);
     padding: 50px;
@@ -18,7 +30,7 @@
     font-size: 40px;
 }
 
-.footer{
+.footer {
     margin-top: 8rem;
     text-align: center;
     background-color: rgb(70, 5, 131);
@@ -27,6 +39,7 @@
     font-weight: bolder;
     font-size: 20px;
 }
+
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -36,7 +49,8 @@
     border-radius: 50%;
     color: aliceblue;
 }
-.quote-container{
+
+.quote-container {
     background: #fff;
     width: 40rem;
     position: absolute;
@@ -47,26 +61,32 @@
     text-align: center;
     box-shadow: 0 1rem 1rem 0 rgb(147, 230, 255);
 }
-.quote-container h2{
+
+.quote-container h2 {
     font-size: 2rem;
     margin-bottom: 4rem;
     position: relative;
 }
-.quote-container blockquote{
+
+.quote-container blockquote {
     font-size: 26px;
     height: 110px;
 }
-.quote-container blockquote::before, .quote-container blockquote::after{
+
+.quote-container blockquote::before,
+.quote-container blockquote::after {
     content: '"';
 }
-.quote-container span{
+
+.quote-container span {
     display: block;
     top: 30px;
     left: 10px;
     float: right;
     position: relative;
 }
-.quote-container span::before{
+
+.quote-container span::before {
     content: '';
     width: 20px;
     height: 2px;
@@ -75,13 +95,15 @@
     top: 50%;
     left: -30px;
 }
-.quote-container div{
+
+.quote-container div {
     width: 100%;
     margin-top: 50px;
     display: flex;
     justify-content: center;
 }
-.share-btn{
+
+.share-btn {
     margin-top: 90px;
     margin-left: 30px;
     text-align: center;
@@ -92,9 +114,10 @@
     color: black;
     border: 2px solid #371F76;
     background-image: none;
-    
+
 }
-.copy-btn{
+
+.copy-btn {
     margin-top: 30rem;
     margin-left: 2rem;
     text-align: center;
@@ -105,8 +128,10 @@
     color: black;
     border: 2px solid #371F76;
     background-image: none;
-    
-}.generate-btn{
+
+}
+
+.generate-btn {
     margin-top: 30rem;
     margin-left: 27rem;
     text-align: center;
@@ -119,69 +144,83 @@
     background-image: none;
 
 }
+
 .generate-btn:hover {
     background-color: #371F76;
     transition-duration: 0.4s;
     color: aliceblue;
     cursor: pointer;
 }
+
 .copy-btn:hover {
     background-color: #371F76;
     transition-duration: 0.4s;
     color: aliceblue;
     cursor: pointer;
 }
+
 .share-btn:hover {
     background-color: #371F76;
     transition-duration: 0.4s;
     color: aliceblue;
     cursor: pointer;
 }
+
 @media screen and (max-width: 600px) {
-    .header{
+    .header {
         width: 23rem;
         height: 1rem;
         align-items: center;
     }
-    .header h1{
+
+    .header h1 {
         background: none;
         font-size: 22px;
     }
-    .quote-container{
+
+    .quote-container {
         top: 20%;
         left: 6%;
         width: 20rem;
         height: 20rem;
         padding-bottom: 1%;
     }
-    .quote-container h2{
+
+    .quote-container h2 {
         font-size: 1.4rem;
     }
-    .quote-container blockquote{
+
+    .quote-container blockquote {
         font-size: 1rem;
         height: 5.5rem;
     }
-    .quote-container span{
+
+    .quote-container span {
         left: 50px;
         top: 25px;
     }
-    .generate-btn{
+
+    .generate-btn {
         font-size: 10px;
         margin-left: 30px;
         margin-bottom: 10px;
         margin-top: 10px;
     }
-    .copy-btn{
+
+    .copy-btn {
         font-size: 10px;
         margin-top: 400px;
     }
-    .share-btn{
+
+    .share-btn {
         font-size: 10px;
     }
-    .buttons{
+
+    .buttons {
         margin-top: 10px;
     }
-    .footer{
+
+    .footer {
         margin-top: 1rem;
         height: 6rem;
         font-size: 1rem;
