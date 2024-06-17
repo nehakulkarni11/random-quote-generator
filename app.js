@@ -1,27 +1,29 @@
+const api_url = "https://api.quotable.io/random";
+
 const generate = document.querySelector("#generate-btn");
 generate.addEventListener("click", fetchQuote);
-const quote = document.getElementById("quote");
-const author = document.getElementById("author");
-let api_url = "https://api.quotable.io/random";
-
-async function fetchQuote(){
-const response = await fetch(api_url);
-let data = await response.json();
-quote.innerText = data.content;
-author.innerText = data.author;
+async function fetchQuote() {
+    const quote = document.getElementById("quote");
+    const author = document.getElementById("author");
+    const response = await fetch(api_url);
+    const data = await response.json();
+    quote.innerText = data.content;
+    author.innerText = data.author;
 }
+fetchQuote();
 
 const share = document.getElementById("share-btn");
-share.addEventListener("click", threads);
-function threads(){
-    window.open("https://threads.net/intent/post?text=" + quote.innerText + "--by " + author.innerText, "Threads Window", "width=600", height="300")
+share.addEventListener("click", shareQuote);
+function shareQuote() {
+    window.open("https://twitter.com/intent/tweet?text=" + quote.innerText + "--by " + author.innerText, "_blank")
 }
 
-const copyQ = document.getElementById("copy-btn");
-share.addEventListener("click", copyQuote);
-function copyQuote(){
-    var copy = document.getElementById("copy-btn");
-    copy.select();
-    navigator.clipboard.writeText(copy.value);
-    alert("Copied the text: " + copy.value);
+const copy = document.getElementById("copy-btn");
+copy.addEventListener("click", copyQuote);
+async function copyQuote() {
+    const target = document.getElementById("quote-container").innerText;
+    if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(target);
+    }
+    alert("Copied the text: " + target);
 }
